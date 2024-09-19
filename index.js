@@ -19,6 +19,10 @@ app.get("/about", (req, res) => {
 app.get("/contact", (req, res) => {
     res.render("contact",{title:"contact"});
 });
+
+app.get("/email", (req, res) => {
+    res.render("email",{title:"email"});
+});
 app.listen(8000, () => {
     console.log("Server started on port 8000");
 });
