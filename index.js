@@ -7,6 +7,7 @@ const app = express();
 const hbs = create({ defaultLayout: "main" });
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
+app.enable('view cache');
 
 app.get("/", (req, res) => {
     res.render("index",{title:"Home"});
